@@ -1,6 +1,9 @@
 body {
-    color: orange;
-    Font-family: arial;
+    font-family: 'YdeStreetL', sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .cursive {
@@ -13,6 +16,73 @@ body {
 	box-sizing: border-box;
 }
 
+  body.dark-mode {
+    background-color: #333;
+    color: #f2f2f2;
+  }
+
+ .toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .toggle-switch {
+    display: none;
+  }
+
+  .toggle-label {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #ddd;
+    cursor: pointer;
+  }
+
+  .toggle-label::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+
+  .toggle-label::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 35px;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+
+  .toggle-switch:checked + .toggle-label::before {
+    transform: translateX(30px);
+  }
+
+  .toggle-switch:checked + .toggle-label::after {
+    color: #fff;
+  }
+
+  .toggle-label::before,
+  .toggle-label::after {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .toggle-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
 /* adjusting fonts */
 
 body {
@@ -48,30 +118,6 @@ img {
     background: beige;
 }
 
-:root {
-    --darkmode: 'true';
-    --color1: #F0EB8D;
-    --color2: #2D2727;
-    --color3: #413543;
-    --color4: #8F43EE;
-    --fill: var(--color4);
-}
-.dark-fill {
-    color: var(--fill);
-}
-
-.darkModeButton {
-    width: auto;
-    height: auto;
-    border-radius: 50%;
-    border: 1px var(--color3);
-    background-color: transparent;
-    transition: filter 0.2s ease;
-}
-
-.darkModeButton:hover {
-    filter: brightness(1.5) drop-shadow(0px 0px 8px var(--fill));
-}
 
 @media only screen and (max-device-width: 812px) {
   body{
