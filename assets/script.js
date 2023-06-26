@@ -1,5 +1,5 @@
 const darkModeToggle = document.getElementById("dark-mode-toggle");
-    const toggleText = document.getElementById("toggle-text");
+const toggleText = document.getElementById("toggle-text");
     
     darkModeToggle.addEventListener("change", function() {
       document.body.classList.toggle("dark-mode");
