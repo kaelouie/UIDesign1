@@ -1,3 +1,12 @@
+body {
+    color: orange;
+    Font-family: arial;
+}
+
+.cursive {
+    font-family: cursive;
+}
+
 * {
 	margin:  0px;
 	padding:  0px;
@@ -34,7 +43,36 @@ img {
 	max-width: 100%;
 	height:  auto;
 }
+@media only screen and (max-device-width: 812px) { 
+    // body {
+    background: beige;
+}
 
+#darkmode-button:hover{
+  text-shadow: 0px 2px 13px rgba(0,0,0, .6);
+  transform: translateY(-2px);
+}
+
+body.darkmode {
+  background-color: black;
+  color: lightpink;
+}
+
+body.darkmode a{
+  color: yellowgreen;
+}
+
+@media only screen and (max-device-width: 812px) {
+  body{
+    background-color: lightpink;
+  }
+}
+
+@media only print{
+  body{
+    font-family: cursive;
+  }
+}
 /* uncomment the code below to set the grid */
 
 /*#grid {
