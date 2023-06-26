@@ -48,41 +48,29 @@ img {
     background: beige;
 }
 
-.darkmode {
-	color: #CED3CD;
-	/*text-shadow: 0 0 10px #F1F4ED;*/
-	background-color: #3B3034;
+:root {
+    --darkmode: 'true';
+    --color1: #F0EB8D;
+    --color2: #2D2727;
+    --color3: #413543;
+    --color4: #8F43EE;
+    --fill: var(--color4);
+}
+.dark-fill {
+    color: var(--fill);
 }
 
-.darkmode header {
-	background-color: #3B3034; 
-	background-repeat: no-repeat; 
-	background-blend-mode:soft-light;
-
+.darkModeButton {
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    border: 1px var(--color3);
+    background-color: transparent;
+    transition: filter 0.2s ease;
 }
 
-.darkmode a,
-.darkmode a:visited {
-	color: #CED3CD;
-	text-shadow: 0 0 10px #E6484F;
-}
-
-.darkmode a:hover {
-	color: #FFFFFF;
-}
-
-.darkmode button {
-	color: #CED3CD;
-	text-shadow: 0 0 10px #E6484F;
-
-}
-
-.darkmode button:hover {
-	color: #FFFFFF;
-}
-
-.hidden {
-	display: none;
+.darkModeButton:hover {
+    filter: brightness(1.5) drop-shadow(0px 0px 8px var(--fill));
 }
 
 @media only screen and (max-device-width: 812px) {
