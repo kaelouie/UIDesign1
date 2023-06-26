@@ -48,6 +48,42 @@ img {
     background: beige;
 }
 
+body.darkmode {
+	background: black;
+	color: #ffdf00;
+}
+
+body.darkmode button {
+	color: black;
+	background-color: #ffdf00;
+}
+
+a.darkmode {
+	color: cyan;
+	display: inline-block;
+
+}
+
+#darkmode {
+	position: absolute;
+	top: 100px;
+	right: 100px;
+	color: white;
+	background: black;
+	font-family: 'arial';
+	font-size: 40px;
+	border-radius: 2px;
+	border: none;
+	cursor: pointer;
+}
+
+#darkmode:hover {
+	background: white;
+	color: black;
+	transition: all 0.2s ease;
+
+}
+
 #darkmode-button:hover{
   text-shadow: 0px 2px 13px rgba(0,0,0, .6);
   transform: translateY(-2px);
