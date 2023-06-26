@@ -1,7 +1,7 @@
-console.log('dark mode');
-
 $(document).ready(function(){
-     $("#darkmode").click(function(){ 
-          $('body').toggleClass('darkmode');
- });
-});
+    $("button").click(function(){
+      $("body").toggleClass("darkmode");
+      $("#moon").toggleClass("hidden");
+      $("#sun").toggleClass("hidden");
+    });
+  });
